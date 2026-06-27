@@ -62,7 +62,19 @@ Yes, it hooks into the standard `lifterlms_course_completed` action which is ava
 
 = Where are errors logged? =
 
-Errors and events are logged to `wp-content/uploads/certifyme-logs/certifyme-lifterlms.log`. The log directory is protected from public access.
+Errors and events are logged to the `certifyme-for-lifterlms` folder inside your WordPress uploads directory. The log directory is protected from public access.
+
+== External Services ==
+
+This plugin connects to the CertifyMe platform API to issue digital credentials when a student completes a LifterLMS course.
+
+**What is sent and when:**
+When a student completes a course, the plugin sends the student's name, email address, and course details to the CertifyMe API endpoint (`api/v2/credential`) on the selected server region (APAC, EU2, US1, or Butterfly). No data is sent unless a course completion event occurs and a valid API token is configured.
+
+**Service provider:** CertifyMe (https://www.certifyme.online)
+
+* Terms of Service: https://www.certifyme.online/TermsAndCondition
+* Privacy Policy: https://www.certifyme.online/Policy
 
 == Screenshots ==
 

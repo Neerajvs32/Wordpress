@@ -1,6 +1,6 @@
 <?php
 function certifyme_get_log_file() {
-    $log_dir = WP_CONTENT_DIR . '/uploads/certifyme-logs';
+    $log_dir = wp_upload_dir()['basedir'] . '/certifyme-for-lifterlms';
 
     if ( ! file_exists( $log_dir ) ) {
         wp_mkdir_p( $log_dir );
